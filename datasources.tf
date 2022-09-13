@@ -15,7 +15,11 @@ data "oci_identity_tenancy" "tenant_details" {
 }
 
 data "oci_identity_regions" "home_region" {
-  region = var.region
+  filter {
+    name   = "key"
+    values = [data.oci_identity_tenancy.tenant_details.home_region_key]
+  }
+
   provider = oci.current_region
 }
 
