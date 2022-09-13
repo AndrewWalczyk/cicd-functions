@@ -3,9 +3,7 @@
 
 variable "tenancy_ocid" {}
 variable "compartment_ocid" {}
-variable "region" {
-  default = "us-ashburn-1"
-}
+variable "region" {}
 
 variable "app_name" {
   default     = "oci-function-cicd"
