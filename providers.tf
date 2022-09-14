@@ -26,7 +26,6 @@ terraform {
 
 provider "oci" {
   tenancy_ocid = var.tenancy_ocid
-  auth = "ResourcePrincipal"
   region = "${var.region}"
 }
 
