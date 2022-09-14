@@ -3,7 +3,9 @@
 
 variable "tenancy_ocid" {}
 variable "compartment_ocid" {}
-variable "region" {}
+variable "region" {
+  default = ""
+}
 
 variable "app_name" {
   default     = "oci-function-cicd"
